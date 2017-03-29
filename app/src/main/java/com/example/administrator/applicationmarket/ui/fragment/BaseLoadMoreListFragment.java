@@ -12,6 +12,7 @@ import android.widget.AbsListView;
 public abstract class BaseLoadMoreListFragment extends BaseListFragment {
 
     public void initListView() {
+        super.initListView();
 
         getListView().setOnScrollListener(new AbsListView.OnScrollListener() {
 
@@ -20,7 +21,7 @@ public abstract class BaseLoadMoreListFragment extends BaseListFragment {
                 //当滚动状态为空闲
                 if(scrollState == SCROLL_STATE_IDLE) {
                     //当当前条目为最后一个条目时
-                    if(getListView().getLastVisiblePosition() == getListAdapter().getCount()-1) {
+                    if(view.getLastVisiblePosition() == getAdapterItemPos()) {
                         onStartLoadMore();
                     }
                 }
@@ -32,6 +33,10 @@ public abstract class BaseLoadMoreListFragment extends BaseListFragment {
             }
         });
 
+    }
+
+    private int getAdapterItemPos() {
+        return getListAdapter().getCount()-1 + getListView().getHeaderViewsCount();
     }
 
     /**

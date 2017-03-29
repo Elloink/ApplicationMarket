@@ -1,6 +1,6 @@
 package com.example.administrator.applicationmarket.ui.fragment;
 
-import android.widget.ListAdapter;
+import android.widget.BaseAdapter;
 
 import com.example.administrator.applicationmarket.adapter.CategoryAdapter;
 import com.example.administrator.applicationmarket.bean.CategoryBean;
@@ -50,7 +50,7 @@ public class CategoryFragment extends BaseListFragment {
      * @return
      */
     @Override
-    protected ListAdapter onCreateAdapter() {
+    protected BaseAdapter onCreateAdapter() {
         return new CategoryAdapter(getContext(), mListData);
     }
 }

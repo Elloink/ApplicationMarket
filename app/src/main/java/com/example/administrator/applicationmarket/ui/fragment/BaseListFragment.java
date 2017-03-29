@@ -2,7 +2,7 @@ package com.example.administrator.applicationmarket.ui.fragment;
 
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ListAdapter;
+import android.widget.BaseAdapter;
 import android.widget.ListView;
 
 /**
@@ -16,7 +16,7 @@ import android.widget.ListView;
 public abstract class BaseListFragment extends BaseFragment {
 
     private ListView mListView;
-    private ListAdapter mListAdapter;
+    private BaseAdapter mListAdapter;
 
     @Override
     public abstract void startDateLoad();
@@ -35,7 +35,11 @@ public abstract class BaseListFragment extends BaseFragment {
             }
         });
         mListView.setDivider(null);
+        initListView();
         return mListView;
+    }
+
+    protected void initListView() {
     }
 
     /**
@@ -48,14 +52,14 @@ public abstract class BaseListFragment extends BaseFragment {
      * 子类必须实现这个方法来创建ListView的Adapter
      * @return
      */
-    protected abstract ListAdapter onCreateAdapter();
+    protected abstract BaseAdapter onCreateAdapter();
 
     //创建get方法，通过外部调用
     public ListView getListView() {
         return mListView;
     }
 
-    public ListAdapter getListAdapter() {
+    public BaseAdapter getListAdapter() {
         return mListAdapter;
     }
 }
