@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:id="@+id/base_fragment"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <ProgressBar
+        android:id="@+id/pb_fragment"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:id="@+id/ll_error_fragment"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_error_fragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_error_page"/>
+
+        <Button
+            android:id="@+id/bt_error_fragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="网络故障，请重试"/>
+
+    </LinearLayout>
+
+</FrameLayout>
