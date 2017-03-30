@@ -70,8 +70,4 @@ public class HomenFragment extends AppAllFragment {
 
     }
 
-    @Override
-    protected void onListItemClick(int position) {
-    }
-
 }

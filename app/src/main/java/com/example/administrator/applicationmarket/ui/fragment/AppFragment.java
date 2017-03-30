@@ -51,9 +51,4 @@ public class AppFragment extends AppAllFragment {
         });
 
     }
-
-    @Override
-    protected void onListItemClick(int position) {
-
-    }
 }

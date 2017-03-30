@@ -54,8 +54,4 @@ public class GameFragment extends AppAllFragment {
 
     }
 
-    @Override
-    protected void onListItemClick(int position) {
-
-    }
 }

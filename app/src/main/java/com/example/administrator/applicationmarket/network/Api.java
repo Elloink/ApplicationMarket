@@ -1,5 +1,6 @@
 package com.example.administrator.applicationmarket.network;
 
+import com.example.administrator.applicationmarket.bean.AppInfoBean;
 import com.example.administrator.applicationmarket.bean.CategoryBean;
 import com.example.administrator.applicationmarket.bean.GameBean;
 import com.example.administrator.applicationmarket.bean.HomeBean;
@@ -45,5 +46,8 @@ public interface Api {
 
     @GET("app")
     Call<List<GameBean>> listApp(@Query("index") int index);
+
+    @GET("detail")
+    Call<AppInfoBean> listAppInfo(@Query("packageName") String packageName);
 
 }

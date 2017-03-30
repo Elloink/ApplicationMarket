@@ -8,5 +8,7 @@ public class Const {
 
     public static final String url = "http://10.0.2.2:8080/GooglePlayServer/image?name=";
 
-    //图片ur
+    public static final String urlPage = "http://10.0.2.2:8080/GooglePlayServer/detail?packageName=";
+
+
 }
