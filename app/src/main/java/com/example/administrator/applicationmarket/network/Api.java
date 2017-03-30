@@ -1,6 +1,8 @@
 package com.example.administrator.applicationmarket.network;
 
 import com.example.administrator.applicationmarket.bean.CategoryBean;
+import com.example.administrator.applicationmarket.bean.GameBean;
+import com.example.administrator.applicationmarket.bean.HomeBean;
 import com.example.administrator.applicationmarket.bean.SubjectBean;
 
 import java.util.List;
@@ -33,5 +35,15 @@ public interface Api {
     Call<List<CategoryBean>> listCategory();
 
     @GET("subject")
-    Call<List<SubjectBean>> listSubject(@Query("index")int index);
+    Call<List<SubjectBean>> listSubject(@Query("index") int index);
+
+    @GET("game")
+    Call<List<GameBean>> listGame(@Query("index") int index);
+
+    @GET("home")
+    Call<HomeBean> listHome(@Query("index") int index);
+
+    @GET("app")
+    Call<List<GameBean>> listApp(@Query("index") int index);
+
 }

@@ -36,7 +36,15 @@ public abstract class BaseListFragment extends BaseFragment {
         });
         mListView.setDivider(null);
         initListView();
+        View header = onCreateListHeader();
+        if (header != null) {
+            mListView.addHeaderView(header);
+        }
         return mListView;
+    }
+
+    public View onCreateListHeader() {
+        return null;
     }
 
     protected void initListView() {
@@ -44,12 +52,14 @@ public abstract class BaseListFragment extends BaseFragment {
 
     /**
      * 子类必须实现这个方法，来设置Item的点击事件
+     *
      * @param position
      */
     protected abstract void onListItemClick(int position);
 
     /**
      * 子类必须实现这个方法来创建ListView的Adapter
+     *
      * @return
      */
     protected abstract BaseAdapter onCreateAdapter();
