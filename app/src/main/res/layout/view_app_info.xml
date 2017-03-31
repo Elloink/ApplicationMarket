@@ -10,6 +10,7 @@
         android:layout_weight="1">
 
         <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -17,9 +18,14 @@
                 android:id="@+id/app_new_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-
             </com.example.administrator.applicationmarket.wiget.AppInfoNewsView>
 
+            <com.example.administrator.applicationmarket.wiget.AppInfoPropertyView
+                android:id="@+id/app_property_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </com.example.administrator.applicationmarket.wiget.AppInfoPropertyView>
 
         </LinearLayout>
 
